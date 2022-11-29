@@ -1,0 +1,14 @@
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
+
+class PizzaTab extends StatelessWidget {
+  const PizzaTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(child: Text("pizza tab")),
+    );
+  }
+}
