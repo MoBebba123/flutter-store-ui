@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
             height: 24,
           ),
           TabBar(tabs: myTabs),
-          const Expanded(
+          Expanded(
               child: TabBarView(
             children: [
               // donut page
