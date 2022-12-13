@@ -8,7 +8,7 @@ class BurgerTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: Text("burger tab")),
+      child: Center(child: Text("burger tabs")),
     );
   }
 }
