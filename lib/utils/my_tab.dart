@@ -10,7 +10,7 @@ class MyTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tab(
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: Colors.grey[200], borderRadius: BorderRadius.circular(12)),
         child: Image.asset(
