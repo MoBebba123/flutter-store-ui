@@ -19,6 +19,7 @@ class DonutTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       itemCount: donutsOnSale.length,
+      padding: const EdgeInsets.all(12),
       gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (context, index) {
