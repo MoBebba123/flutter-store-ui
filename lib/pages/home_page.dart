@@ -3,6 +3,7 @@ import 'package:donut_app/tabs/cake_tab.dart';
 import 'package:donut_app/tabs/donut_tab.dart';
 import 'package:donut_app/tabs/pizza_tab.dart';
 import 'package:donut_app/tabs/smoothie_tab.dart';
+import 'package:donut_app/utils/drawer.dart';
 import 'package:donut_app/utils/my_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final GlobalKey<ScaffoldState> _drawerKey = GlobalKey<ScaffoldState>();
   List<Widget> myTabs = [
     const MyTab(
       iconPath: "lib/icons/donut.png",
@@ -34,6 +36,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _drawerKey,
+      drawer: Drawer(
+        child: Drawer_nav(),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -44,9 +50,7 @@ class _HomePageState extends State<HomePage> {
               Icons.menu,
               color: Colors.grey[800],
             ),
-            onPressed: () {
-              // open drawer
-            },
+            onPressed: () => _drawerKey.currentState?.openDrawer(),
           ),
         ),
         actions: [
@@ -92,13 +96,13 @@ class _HomePageState extends State<HomePage> {
               // donut page
               DonutTab(),
               // burger page
-              BurgerTab(),
+              const BurgerTab(),
               // cake page
-              CakeTab(),
+              const CakeTab(),
               // smoothie page
-              SmoothieTab(),
+              const SmoothieTab(),
               // pizza page
-              PizzaTab(),
+              const PizzaTab(),
             ],
           ))
         ]),
