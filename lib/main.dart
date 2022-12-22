@@ -1,4 +1,6 @@
 import 'package:donut_app/pages/home_page.dart';
+import 'package:donut_app/pages/product_page.dart';
+import 'package:donut_app/route_generator.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: const HomePage(),
+      initialRoute: "/",
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

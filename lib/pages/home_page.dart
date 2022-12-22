@@ -62,7 +62,8 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.grey[800],
                 ),
                 onPressed: () {
-                  // open account
+                  Navigator.of(context)
+                      .pushNamed("/product", arguments: 'hello there');
                 },
               ))
         ],
