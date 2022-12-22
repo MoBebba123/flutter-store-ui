@@ -67,7 +67,8 @@ class _HomePageState extends State<HomePage> {
         length: myTabs.length,
         child: Column(children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 36.0, vertical: 10.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 36.0, vertical: 10.0),
             child: Row(
               children: const [
                 Text(
